@@ -23,3 +23,15 @@
 |export|null|volatile|
 |extends|package|while|
 |false|private|with|
+
+# Alert
+```
+alert("Hello World!");
+```
+# Variables
+```
+var name = "Idrees";
+var nationality = "Pakistan";
+var weight = "150";
+var caseQty = 144;
+```
