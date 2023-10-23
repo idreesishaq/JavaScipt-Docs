@@ -60,4 +60,23 @@ var totalCost = 4*12+3+120*5;
 var totalCost = 4*(12+3)*2+3 //123
 var totalCost = 4*(12+3)*(2+3) //300
 ```
-
+# Concatenating Text String
+```
+var message = "Assalamo Alaikum";
+var name = "Idrees";
+var username = "Norman"
+alert(message +" "+ name)	//"Assalamo Alaikum Idrees"
+alert("Thanks " + username)	//"Thanks Norman"
+```
+# Prompts
+```
+var name = prompt ("What's your name?");
+var numberOfPets = prompt ("How many pets?");
+```
+# *if* statements
+```
+var x = prompt("What is the biggest continent in the world?");
+if (x === "Asia") {
+	alert("Correct");
+}
+```
