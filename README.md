@@ -35,3 +35,29 @@ var nationality = "Pakistan";
 var weight = "150";
 var caseQty = 144;
 ```
+# Math expressions
+```
+var commonNumber = 2 + 2;
+var commonNumber = 12 - 24;
+var commonNumber = 4 * 12;
+var num = 10;
+var commonNumber = 300;
+var commonNumber = 15 / 4;
+var remainder = 15 % 4;
+```
+### increment / decrement
+```
+num++; //post increment
+num--; //post decrement
+++num; //pre-increment
+--num; //pre-decrement
+num = num + 1;
+num = num - 1;
+```
+### Eliminating ambiguity
+```
+var totalCost = 4*12+3+120*5;
+var totalCost = 4*(12+3)*2+3 //123
+var totalCost = 4*(12+3)*(2+3) //300
+```
+
