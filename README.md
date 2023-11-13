@@ -175,3 +175,9 @@ This set of conditions has four criteria, which are combined with "**&&**" that 
 
 |age > 65 or age < 21 | Resident of Pakistan|
 |---|---|
+
+### SET VI
+```if (age > 65 || (age < 21 && res === "Pakistan") ) {...```
+
+|age > 65 | age < 21 or Resident of Pakistan |
+|---|---|
