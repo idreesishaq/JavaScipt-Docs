@@ -211,4 +211,17 @@ else {
 	e = f;
 }
 ```
+<hr>
+
+# Arrays
+Assigning of some string values to some variabls.
+```
+var city0 = "Karachi";
+var city1 = "Lahore";
+var city2 = "Islamabad";
+var city3 = "Faisalabad";
+var city4 = "Multan";
+var city5 = "Peshawar";
+var city6 = "Quetta";
+```
 
