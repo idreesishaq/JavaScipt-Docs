@@ -181,3 +181,16 @@ This set of conditions has four criteria, which are combined with "**&&**" that 
 
 |age > 65 | age < 21 or Resident of Pakistan |
 |---|---|
+
+# *if* statements nested
+
+Check out this code.
+```
+if ((x === y || a === b ) && c === d) {
+	g = h;
+}
+else {
+	e = f
+}
+```
+
