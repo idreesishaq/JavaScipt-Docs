@@ -224,4 +224,15 @@ var city4 = "Multan";
 var city5 = "Peshawar";
 var city6 = "Quetta";
 ```
+This is how we can create an array under a single container;
+```
+var cities = ["Karachi", "Lahore", "Islamabad", "Faisalabad", "Multan", "Peshawar", "Quetta"];
+```
+
+Mixed array
+```
+var mixedArray = [23, "Idrees", true, "2023"];
+```
+# Arrays: Adding and removing elements
+
 
