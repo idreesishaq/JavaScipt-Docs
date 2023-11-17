@@ -279,3 +279,15 @@ console.log(pets)	//['lion', 'elephant', 'cat', 'bird', 'lizard', 'fish', 'ferre
 ```
 ## array.splice 
 Use the **splice** method to insert one or more elements anywhere in an array, while optionally, removing one or more elements that come after it.
+The following code 
+```
+pets = ['lion', 'elephant', 'cat', 'bird', 'lizard', 'fish', 'ferret'];
+pets.splice(2, 2, "pig", "duck", "emu");
+
+console.log(pets)	['lion', 'elephant', 'pig', 'duck', 'emu', 'lizard', 'fish', 'ferret'];
+```
+in the above code, the first argument of splice method **2** the give elements (here; "pig", "duck", and "emu") to add from the index of **2**.
+the second argument **2** means, to remove **2 items** next to it (here; "cat", "bird").
+and the following arguments are the elements to be add.
+
+
