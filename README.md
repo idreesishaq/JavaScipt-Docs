@@ -265,6 +265,7 @@ Use the **shift** method to remove an element from the beginning of an array.
 ```
 pets = ['dog', 'cat', 'bird', 'lizard', 'fish', 'ferret'];
 pets.shift();
+
 console.log(pets);	//['cat', 'bird', 'lizard', 'fish', 'ferret'];
 ```
 ## array.unshift
@@ -272,6 +273,9 @@ use the **unshift** method to add one or more elements to the beginning of an ar
 ```
 pets = ['cat', 'bird', 'lizard', 'fish', 'ferret'];
 pets.unshift('lion', 'elephant');
+
 console.log(pets)	//['lion', 'elephant', 'cat', 'bird', 'lizard', 'fish', 'ferret'];
 
 ```
+## array.splice 
+Use the **splice** method to insert one or more elements anywhere in an array, while optionally, removing one or more elements that come after it.
