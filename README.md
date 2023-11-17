@@ -247,16 +247,31 @@ pets[4] = "snake";
 console.log(pets) // ['dog', 'cat', 'bird', 'lizard', 'snake']
 ```
 
-## pop
+## array.pop
 Using the **pop** keyword, you can remove the last element of an array.
 ```
 pets.pop();
 console.log(pets)	//['dog', 'cat', 'bird', 'lizard']
 ```
 
-## push
+## array.push
 Using the **push** keyword, you can add one or more elements to the end of an array.
 ```
 pets.push("fish", "ferret");
 console.log(pets);	['dog', 'cat', 'bird', 'lizard', 'fish', 'ferret']
+```
+## array.shift
+Use the **shift** method to remove an element from the beginning of an array.
+```
+pets = ['dog', 'cat', 'bird', 'lizard', 'fish', 'ferret'];
+pets.shift();
+console.log(pets);	//['cat', 'bird', 'lizard', 'fish', 'ferret'];
+```
+## array.unshift
+use the **unshift** method to add one or more elements to the beginning of an array.
+```
+pets = ['cat', 'bird', 'lizard', 'fish', 'ferret'];
+pets.unshift('lion', 'elephant');
+console.log(pets)	//['lion', 'elephant', 'cat', 'bird', 'lizard', 'fish', 'ferret'];
+
 ```
