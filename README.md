@@ -215,6 +215,7 @@ else {
 
 # Arrays
 Assigning of some string values to some variabls.
+
 ```
 var city0 = "Karachi";
 var city1 = "Lahore";
@@ -225,6 +226,7 @@ var city5 = "Peshawar";
 var city6 = "Quetta";
 ```
 This is how we can create an array under a single container;
+
 ```
 var cities = ["Karachi", "Lahore", "Islamabad", "Faisalabad", "Multan", "Peshawar", "Quetta"];
 ```
@@ -233,6 +235,7 @@ Mixed array
 ```
 var mixedArray = [23, "Idrees", true, "2023"];
 ```
+
 # Arrays: Adding and removing elements
 
 You can assign or change a variable values whenever you like
@@ -249,6 +252,7 @@ console.log(pets) // ['dog', 'cat', 'bird', 'lizard', 'snake']
 
 ## array.pop
 Using the **pop** keyword, you can remove the last element of an array.
+
 ```
 pets.pop();
 console.log(pets)	//['dog', 'cat', 'bird', 'lizard']
@@ -256,20 +260,25 @@ console.log(pets)	//['dog', 'cat', 'bird', 'lizard']
 
 ## array.push
 Using the **push** keyword, you can add one or more elements to the end of an array.
+
 ```
 pets.push("fish", "ferret");
 console.log(pets);	['dog', 'cat', 'bird', 'lizard', 'fish', 'ferret']
 ```
+
 ## array.shift
 Use the **shift** method to remove an element from the beginning of an array.
+
 ```
 pets = ['dog', 'cat', 'bird', 'lizard', 'fish', 'ferret'];
 pets.shift();
 
 console.log(pets);	//['cat', 'bird', 'lizard', 'fish', 'ferret'];
 ```
+
 ## array.unshift
 use the **unshift** method to add one or more elements to the beginning of an array.
+
 ```
 pets = ['cat', 'bird', 'lizard', 'fish', 'ferret'];
 pets.unshift('lion', 'elephant');
@@ -277,17 +286,30 @@ pets.unshift('lion', 'elephant');
 console.log(pets)	//['lion', 'elephant', 'cat', 'bird', 'lizard', 'fish', 'ferret'];
 
 ```
+
 ## array.splice 
+
+**using splice method to insert and remove simultaneously**
 Use the **splice** method to insert one or more elements anywhere in an array, while optionally, removing one or more elements that come after it.
 The following code 
+
 ```
 pets = ['lion', 'elephant', 'cat', 'bird', 'lizard', 'fish', 'ferret'];
 pets.splice(2, 2, "pig", "duck", "emu");
 
-console.log(pets)	['lion', 'elephant', 'pig', 'duck', 'emu', 'lizard', 'fish', 'ferret'];
+console.log(pets)	//['lion', 'elephant', 'pig', 'duck', 'emu', 'lizard', 'fish', 'ferret'];
 ```
+
 in the above code, the first argument of splice method **2** the give elements (here; "pig", "duck", and "emu") to add from the index of **2**.
 the second argument **2** means, to remove **2 items** next to it (here; "cat", "bird").
 and the following arguments are the elements to be add.
 
+**using splice method to insert new elements only**
+you could make additions without removing any elements
 
+```
+pets = ['lion', 'elephant', 'cat', 'bird', 'lizard', 'fish', 'ferret'];
+pets.splice(2, 0, 'pig', 'duck', 'emu');
+
+console.log(pets)	//['lion', 'elephant', 'pig', 'duck', 'emu', 'cat', 'bird', 'lizard', 'fish', 'ferret'];
+```
