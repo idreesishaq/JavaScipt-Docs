@@ -235,4 +235,28 @@ var mixedArray = [23, "Idrees", true, "2023"];
 ```
 # Arrays: Adding and removing elements
 
+You can assign or change a variable values whenever you like
+```
+var pets = [];
+pets[0] = "dog";
+pets[1] = "cat";
+pets[2] = "bird";
+pets[3] = "lizard";
+pets[4] = "snake";
 
+console.log(pets) // ['dog', 'cat', 'bird', 'lizard', 'snake']
+```
+
+## pop
+Using the **pop** keyword, you can remove the last element of an array.
+```
+pets.pop();
+console.log(pets)	//['dog', 'cat', 'bird', 'lizard']
+```
+
+## push
+Using the **push** keyword, you can add one or more elements to the end of an array.
+```
+pets.push("fish", "ferret");
+console.log(pets);	['dog', 'cat', 'bird', 'lizard', 'fish', 'ferret']
+```
