@@ -313,3 +313,12 @@ pets.splice(2, 0, 'pig', 'duck', 'emu');
 
 console.log(pets)	//['lion', 'elephant', 'pig', 'duck', 'emu', 'cat', 'bird', 'lizard', 'fish', 'ferret'];
 ```
+
+## array.slice
+**use the slice method to copy one or more any consecutive elements in any position and put them into a new array**
+
+```
+pets = ['lion', 'elephant', 'cat', 'bird', 'lizard', 'fish', 'ferret'];
+var newPets = pets.slice(2,4); // ['cat', 'bird'];
+
+```
