@@ -322,3 +322,13 @@ pets = ['lion', 'elephant', 'cat', 'bird', 'lizard', 'fish', 'ferret'];
 var newPets = pets.slice(2,4); // ['cat', 'bird'];
 
 ```
+
+# for loops
+
+```
+for (var i = 0; i<=4; i++ ) {
+	if (cityToCheck ===cleanestCities[i]) {
+		alert("It's one of the cleanest cities");
+	}
+}
+```
