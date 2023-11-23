@@ -345,3 +345,20 @@ for (var i = 0; i < firstNames.length; i++) {
 	}
 }
 ```
+
+# Changing case
+
+## toLowerCase()
+```
+var cities = ["karachi", "HyderAbad", "LahOre", "PesHaWar", "IsLamABAD]
+var citiesInLowerCase = [];
+for (var i =0 ; i < cities.length; i++ ) {
+	citiesInLowerCase.push(cities[i].toLowerCase());
+}
+```
+
+## toUpperCase()
+
+```
+
+```
