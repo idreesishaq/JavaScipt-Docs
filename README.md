@@ -360,5 +360,9 @@ for (var i =0 ; i < cities.length; i++ ) {
 ## toUpperCase()
 
 ```
-
+var cities = ["karachi", "HyderAbad", "LahOre", "PesHaWar", "IsLamABAD]
+var citiesInUpperCase = [];
+for (var i =0 ; i < cities.length; i++ ) {
+	citiesInUpperCase.push(cities[i].toUpperCase());
+}
 ```
