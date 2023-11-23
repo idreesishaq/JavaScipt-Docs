@@ -332,3 +332,16 @@ for (var i = 0; i<=4; i++ ) {
 	}
 }
 ```
+
+# for loops nested
+
+```
+var firstNames = ["Idrees", "Ishaq", "Hamza", "Usman", "Irfan"];
+var lastNames = ["Ali", "Ahmed", "Siddiq", "Hashim"];
+var fullNames = [];
+for (var i = 0; i < firstNames.length; i++) {
+	for (var j = 0; i < lastNames.length; j++) {
+		fullNames.push(firstNames[i] + lastNames[j])
+	}
+}
+```
