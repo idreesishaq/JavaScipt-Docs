@@ -372,3 +372,15 @@ console.log(citiesInUpperCase);
 
 # Strings: Measuring length and extracting parts
 
+## extracting first character
+```
+var firstChar = "idrees".slice(0,1);
+console.log(firstChar);
+```
+## extracting remaining characters
+
+```
+var someChars = "idrees".slice(1,6);
+console.log(someChars);
+```
+
