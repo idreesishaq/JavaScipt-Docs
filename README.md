@@ -340,29 +340,35 @@ var firstNames = ["Idrees", "Ishaq", "Hamza", "Usman", "Irfan"];
 var lastNames = ["Ali", "Ahmed", "Siddiq", "Hashim"];
 var fullNames = [];
 for (var i = 0; i < firstNames.length; i++) {
-	for (var j = 0; i < lastNames.length; j++) {
-		fullNames.push(firstNames[i] + lastNames[j])
+	for (var j = 0; j < lastNames.length; j++) {
+		fullNames.push(firstNames[i] +" "+ lastNames[j])
 	}
 }
+console.log(fullNames);
 ```
 
 # Changing case
 
 ## toLowerCase()
 ```
-var cities = ["karachi", "HyderAbad", "LahOre", "PesHaWar", "IsLamABAD]
+var cities = ["karachi", "HyderAbad", "LahOre", "PesHaWar", "IsLamABAD"];
 var citiesInLowerCase = [];
 for (var i =0 ; i < cities.length; i++ ) {
 	citiesInLowerCase.push(cities[i].toLowerCase());
 }
+console.log(citiesInLowerCase);
 ```
 
 ## toUpperCase()
 
 ```
-var cities = ["karachi", "HyderAbad", "LahOre", "PesHaWar", "IsLamABAD]
+var cities = ["karachi", "HyderAbad", "LahOre", "PesHaWar", "IsLamABAD"];
 var citiesInUpperCase = [];
 for (var i =0 ; i < cities.length; i++ ) {
 	citiesInUpperCase.push(cities[i].toUpperCase());
 }
+console.log(citiesInUpperCase);
 ```
+
+# Strings: Measuring length and extracting parts
+
