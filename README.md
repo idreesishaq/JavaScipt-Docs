@@ -310,8 +310,9 @@ you could make additions without removing any elements
 ```
 pets = ['lion', 'elephant', 'cat', 'bird', 'lizard', 'fish', 'ferret'];
 pets.splice(2, 0, 'pig', 'duck', 'emu');
+console.log(pets);	
 
-console.log(pets)	//['lion', 'elephant', 'pig', 'duck', 'emu', 'cat', 'bird', 'lizard', 'fish', 'ferret'];
+//output: (10) ['lion', 'elephant', 'pig', 'duck', 'emu', 'cat', 'bird', 'lizard', 'fish', 'ferret']
 ```
 
 ## array.slice
@@ -319,18 +320,25 @@ console.log(pets)	//['lion', 'elephant', 'pig', 'duck', 'emu', 'cat', 'bird', 'l
 
 ```
 pets = ['lion', 'elephant', 'cat', 'bird', 'lizard', 'fish', 'ferret'];
-var newPets = pets.slice(2,4); // ['cat', 'bird'];
+var newPets = pets.slice(2,4);
+console.log(newPets);
 
+//output (2) ['cat', 'bird']
 ```
 
 # for loops
 
 ```
+var cleanestCities = ["helsinki", "islamabad", "melbourne", "oslo", "bogota", "minneapolis"];
+var cityToCheck = "islamabad";
+
+//forloop syntax with simple example
 for (var i = 0; i<=4; i++ ) {
 	if (cityToCheck ===cleanestCities[i]) {
-		alert("It's one of the cleanest cities");
+		console.log("It's one of the cleanest cities");
 	}
 }
+//output "It's one of the cleanest cities"
 ```
 
 # for loops nested
@@ -345,6 +353,8 @@ for (var i = 0; i < firstNames.length; i++) {
 	}
 }
 console.log(fullNames);
+
+//output (20) ['Idrees Ali', 'Idrees Ahmed', 'Idrees Siddiq', 'Idrees Hashim', 'Ishaq Ali', 'Ishaq Ahmed', 'Ishaq Siddiq', 'Ishaq Hashim', 'Hamza Ali', 'Hamza Ahmed', 'Hamza Siddiq', 'Hamza Hashim', 'Usman Ali', 'Usman Ahmed', 'Usman Siddiq', 'Usman Hashim', 'Irfan Ali', 'Irfan Ahmed', 'Irfan Siddiq', 'Irfan Hashim']
 ```
 
 # Changing case
@@ -357,6 +367,8 @@ for (var i =0 ; i < cities.length; i++ ) {
 	citiesInLowerCase.push(cities[i].toLowerCase());
 }
 console.log(citiesInLowerCase);
+
+//output: (5) ['karachi', 'hyderabad', 'lahore', 'peshawar', 'islamabad']
 ```
 
 ## toUpperCase()
@@ -368,6 +380,8 @@ for (var i =0 ; i < cities.length; i++ ) {
 	citiesInUpperCase.push(cities[i].toUpperCase());
 }
 console.log(citiesInUpperCase);
+
+//output: (5) ['KARACHI', 'HYDERABAD', 'LAHORE', 'PESHAWAR', 'ISLAMABAD']
 ```
 
 # Strings: Measuring length and extracting parts
@@ -383,9 +397,32 @@ console.log(firstChar);		//output: "i"
 var someChars = "idrees".slice(1,6);
 console.log(someChars);		//output: "drees"
 ```
-or you can omit the second argument either for precise or if you don't know the lenght of the text.
+or you can omit the second argument inside the parenthese, either for precise or if you don't know the lenght of the text, JavaScript includes all the characters to the end of the string. 
 
 ```
 var someChars = "idrees".slice(1);
 console.log(someChars);		//output: "drees"
+```
+
+## to Capitalize
+Now we have a way to capitalize the first characters of a string and insure that the remaining letters are lower-case.
+
+```
+var myName = "idreEs";
+var capName = myName.slice(0,1).toUpperCase() + myName.slice(1).toLowerCase();
+console.log(capName);
+
+//output: Idrees
+```
+
+Similarly, we can capitalize the every element of an array list.
+```
+var cities = ["karachi", "HyderAbad", "LahOre", "PesHaWar", "IsLamABAD"];
+var citiesToCap = [];
+for (var i =0 ; i < cities.length; i++ ) {
+	citiesToCap.push(cities[i].slice(0,1).toUpperCase() + cities[i].slice(1).toLowerCase());
+}
+console.log(citiesToCap);
+
+//output: (5) ['Karachi', 'Hyderabad', 'Lahore', 'Peshawar', 'Islamabad']
 ```
