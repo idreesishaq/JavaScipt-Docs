@@ -458,7 +458,7 @@ for (var i = 0; i < text.length; i++){
 console.log(text);
 ```
 
-### Finding with method
+### Finding and replace with method
 JavaScript has a more efficient way to accomplish the above task, using the `indexOf` method.
 
 ```
@@ -482,6 +482,32 @@ console.log(text);
 
 **Limitation**
 - If the segment doesn't exit, the method assigns -1
-- The `indexOf` method finds only the first instance of the segments you're looking for. You could overcome this limitation by looping
-- to find the last instance of the segments in a string, use `lastIndexOf` method.
+- The `indexOf` method finds only the first instance of the segments you're looking for. You could overcome this limitation by looping.
 
+### overcome the limitation with looping
+
+```
+var text = "javascript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web,alongside HTML and CSS. As of 2023, 98.7% of websites use javascript on the client side for webpage behavior, often incorporating third-party libraries.javascript was invented by Brendan Eich in 1995. Javascript is a case-sensitve language and an interpreted language.";
+
+var searchTerm = "javascript";
+var replacementTerm = "JavaScript";
+
+var firstChar = text.indexOf(searchTerm);
+
+while (firstChar !== -1) {
+    text = text.slice(0, firstChar) + replacementTerm + text.slice(firstChar + searchTerm.length);
+    firstChar = text.indexOf(searchTerm);
+}
+
+console.log(text);
+```
+
+Similarly, to find the last instance of a segment in a string, use `lastIndexOf`.
+
+```
+var text = "To be or not to be";
+var segIndex = text.lastIndexOf("be");
+console.log(segIndex);
+
+//output: 16
+```
