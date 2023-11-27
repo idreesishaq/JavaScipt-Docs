@@ -443,7 +443,8 @@ for (var i = 0; i < numChars; i++){
 ```
 
 ## Strings: Finding Segments
-find and replace an string segments **without any method**
+### Finding and replace an string segments without any method
+The below code will find the text "javascript" and change it with "JavaScript".
 
 ```
 var text = "javascript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web,alongside HTML and CSS. As of 2023, 98.7% of websites use javascript on the client side for webpage behavior, often incorporating third-party libraries.javascript was invented by Brendan Eich in 1995. Javascript is a case-sensitve language and an interpreted language.";
@@ -457,4 +458,30 @@ for (var i = 0; i < text.length; i++){
 console.log(text);
 ```
 
+### Finding with method
+JavaScript has a more efficient way to accomplish the above task, using the `indexOf` method.
+
+```
+var firstChar = text.indexOf("javascript");
+console.log(firstChar);
+```
+
+Now, we can replace the incorrect spelling "javascript" with the correct and official spelling of "JavaScript" (with a capital "J" and "S") with less coding.
+
+```
+var text = "javascript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web,alongside HTML and CSS. As of 2023, 98.7% of websites use javascript on the client side for webpage behavior, often incorporating third-party libraries.javascript was invented by Brendan Eich in 1995. Javascript is a case-sensitve language and an interpreted language.";
+
+var firstChar = text.indexOf("javascript");
+for (var i = 0; i < text.length; i++){
+    if(firstChar !== -1){
+        text = text.slice(0, firstChar) + "JavaScript" + text.slice(firstChar+10);
+    }
+}
+console.log(text);
+```
+
+**Limitation**
+- If the segment doesn't exit, the method assigns -1
+- The `indexOf` method finds only the first instance of the segments you're looking for. You could overcome this limitation by looping
+- to find the last instance of the segments in a string, use `lastIndexOf` method.
 
