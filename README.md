@@ -443,5 +443,18 @@ for (var i = 0; i < numChars; i++){
 ```
 
 ## Strings: Finding Segments
+find and replace an string segments **without any method**
+
+```
+var text = "javascript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web,alongside HTML and CSS. As of 2023, 98.7% of websites use javascript on the client side for webpage behavior, often incorporating third-party libraries.javascript was invented by Brendan Eich in 1995. Javascript is a case-sensitve language and an interpreted language.";
+
+for (var i = 0; i < text.length; i++){
+    if (text.slice(i,i+10) === "javascript"){
+        // console.log(text.slice(i,i+10))
+        text = text.slice(0,i) + "JavaScript" + text.slice(i+10);
+    }
+}
+console.log(text);
+```
 
 
