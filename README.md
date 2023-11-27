@@ -375,12 +375,17 @@ console.log(citiesInUpperCase);
 ## extracting first character
 ```
 var firstChar = "idrees".slice(0,1);
-console.log(firstChar);
+console.log(firstChar);		//output: "i"
 ```
 ## extracting remaining characters
 
 ```
 var someChars = "idrees".slice(1,6);
-console.log(someChars);
+console.log(someChars);		//output: "drees"
 ```
+or you can omit the second argument either for precise or if you don't know the lenght of the text.
 
+```
+var someChars = "idrees".slice(1);
+console.log(someChars);		//output: "drees"
+```
