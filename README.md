@@ -384,14 +384,15 @@ console.log(citiesInUpperCase);
 //output: (5) ['KARACHI', 'HYDERABAD', 'LAHORE', 'PESHAWAR', 'ISLAMABAD']
 ```
 
-# Strings: Measuring length and extracting parts
+# Strings
+## Strings: Measuring length and extracting parts
 
-## extracting first character
+### extracting first character
 ```
 var firstChar = "idrees".slice(0,1);
 console.log(firstChar);		//output: "i"
 ```
-## extracting remaining characters
+### extracting remaining characters
 
 ```
 var someChars = "idrees".slice(1,6);
@@ -404,7 +405,7 @@ var someChars = "idrees".slice(1);
 console.log(someChars);		//output: "drees"
 ```
 
-## to Capitalize
+### to Capitalize
 Now we have a way to capitalize the first characters of a string and insure that the remaining letters are lower-case.
 
 ```
@@ -426,3 +427,21 @@ console.log(citiesToCap);
 
 //output: (5) ['Karachi', 'Hyderabad', 'Lahore', 'Peshawar', 'Islamabad']
 ```
+
+### check double space
+You can use the `slice` method for space limitation.
+
+```
+var str = prompt ("Enter some text");
+var numChars = str.length;
+for (var i = 0; i < numChars; i++){
+    if (str.slice (i,i+2) === "  "){
+        alert ("No double space!");
+        break;
+    }
+}
+```
+
+## Strings: Finding Segments
+
+
