@@ -437,7 +437,6 @@ var numChars = str.length;
 for (var i = 0; i < numChars; i++){
     if (str.slice (i,i+2) === "  "){
         alert ("No double space!");
-        break;
     }
 }
 ```
@@ -511,3 +510,39 @@ console.log(segIndex);
 
 //output: 16
 ```
+
+## Strings: Finding a character at a location
+You already know
+```
+var firstName = "Idrees";
+var firstChar = firstName.slice(0,1);
+console.log(firstChar);     //output: "I";
+```
+
+Here's is alternate way to do it that's more direct.
+```
+var firstName = "Idrees";
+var firstChar = firstName.charAt(0);
+console.log(firstChar);     //output: "I";
+```
+
+The following code finds the last character in the string
+```
+var firstName = "Idrees";
+var firstChar = firstName.charAt(firstName.length-1);
+console.log(firstChar);     //output: "s";
+```
+
+The following code cycles through a string looking for 'At sign' @ symbol. If the character is found, an alert displays.
+```
+var anEmail = "example@email.com";
+for (var i = 0; i < anEmail.length; i++){
+    if (anEmail.charAt(i) === "@") {
+        alert("At sign found!");
+    }
+}
+```
+
+**Note: The `charAt` method can only identify the character at a particular location. It can't change the character at a location**
+
+**and `indexOf` can find the index of the first occurence of a specified value in a string**
