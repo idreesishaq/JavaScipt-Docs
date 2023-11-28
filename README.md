@@ -450,14 +450,13 @@ var text = "javascript, often abbreviated as JS, is a programming language that 
 
 for (var i = 0; i < text.length; i++){
     if (text.slice(i,i+10) === "javascript"){
-        // console.log(text.slice(i,i+10))
         text = text.slice(0,i) + "JavaScript" + text.slice(i+10);
     }
 }
 console.log(text);
 ```
 
-### Finding and replace with method
+### Finding and replace with method `indexOf`
 JavaScript has a more efficient way to accomplish the above task, using the `indexOf` method.
 
 ```
@@ -471,11 +470,9 @@ Now, we can replace the incorrect spelling "javascript" with the correct and off
 var text = "javascript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web,alongside HTML and CSS. As of 2023, 98.7% of websites use javascript on the client side for webpage behavior, often incorporating third-party libraries.javascript was invented by Brendan Eich in 1995. Javascript is a case-sensitve language and an interpreted language.";
 
 var firstChar = text.indexOf("javascript");
-for (var i = 0; i < text.length; i++){
     if(firstChar !== -1){
         text = text.slice(0, firstChar) + "JavaScript" + text.slice(firstChar+10);
     }
-}
 console.log(text);
 ```
 
@@ -546,3 +543,54 @@ for (var i = 0; i < anEmail.length; i++){
 **Note: The `charAt` method can only identify the character at a particular location. It can't change the character at a location**
 
 **and `indexOf` can find the index of the first occurence of a specified value in a string**
+
+## Strings: Replacing characters
+previously, you have leaned two different ways to replace "javascript" with the "JavaScript" in a string.
+
+First **loop-and-slice approach**
+```
+var text = "javascript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web,alongside HTML and CSS. As of 2023, 98.7% of websites use this language on the client side for webpage behavior, often incorporating third-party libraries.";
+
+for (var i = 0; i < text.length; i++){
+    if (text.slice(i,i+10) === "javascript"){
+        text = text.slice(0,i) + "JavaScript" + text.slice(i+10);
+    }
+}
+console.log(text);
+```
+
+Second, **using indexOf method**
+```
+var text = "javascript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web,alongside HTML and CSS. As of 2023, 98.7% of websites use this language on the client side for webpage behavior, often incorporating third-party libraries.";
+
+var firstChar = text.indexOf("javascript");
+    if(firstChar !== -1){
+        text = text.slice(0, firstChar) + "JavaScript" + text.slice(firstChar+10);
+    }
+console.log(text);
+```
+
+**But JavaScript provides a more straightforward way still, the `replace` method.**
+
+**Syntax of `string.replace`**
+```
+var newString = string.replace("segment to be replace", "segment to be insterted");
+```
+
+```
+var text = "javascript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web,alongside HTML and CSS. As of 2023, 98.7% of websites use javascript on the client side for webpage behavior, often incorporating third-party libraries. javascript was invented by Brendan Eich in 1995. javascript is a case-sensitve language and an interpreted language.";
+
+var newText = text.replace("javascript", "JavaScript");
+console.log(newText);
+```
+
+But only the first instance of string is replace, to replace all instances you must let JavaScript know that you want a **global replace**
+
+```
+var text = "javascript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web,alongside HTML and CSS. As of 2023, 98.7% of websites use javascript on the client side for webpage behavior, often incorporating third-party libraries. javascript was invented by Brendan Eich in 1995. javascript is a case-sensitve language and an interpreted language.";
+
+var newText = text.replace(/javascript/g, "JavaScript");
+console.log(newText);
+```
+
+**Note: In JavaScript, the replace method is used to replace a specified substring or pattern (by using of regular expression as search parameter).**
