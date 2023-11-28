@@ -594,3 +594,20 @@ console.log(newText);
 ```
 
 **Note: In JavaScript, the replace method is used to replace a specified substring or pattern (by using of regular expression as search parameter).**
+
+# Numbers
+
+## Numbers: Rounding numbers
+For rounding a number there are multiple methods under **Math** object in JavaScript.
+`Math.round()`
+`Math.ceil()`
+`Math.floor()`
+
+**`Math.round()`**
+- If the fractional part (decimal) of the number is 0.5 or greater, the number is rounded up by adding 1 to the integer part.
+- If the fractional part is less than 0.5, the number is rounded down, and the decimal part is effectively discarded.
+
+
+## Numbers: Generating random numbers
+## Numbers: Converting strings to integers and decimals
+## Numbers: Converting strings to numbers, numbers to strings
