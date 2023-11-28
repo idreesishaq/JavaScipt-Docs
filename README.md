@@ -607,6 +607,26 @@ For rounding a number there are multiple methods under **Math** object in JavaSc
 - If the fractional part (decimal) of the number is 0.5 or greater, the number is rounded up by adding 1 to the integer part.
 - If the fractional part is less than 0.5, the number is rounded down, and the decimal part is effectively discarded.
 
+|Math.round(number)|output|
+|---|---|
+|Math.round(1.5)|2|
+|Math.round(1.49)|1|
+|Math.round(-1.5)|-1|
+|Math.round(-2.5)|-2|
+|Math.round(-1.49)|-1|
+|Math.round(-1.51)|-2|
+|Math.round(-1.05)|-1|
+
+```
+console.log(Math.round(1.5));   //output: 2
+console.log(Math.round(1.49));  //output: 1
+console.log(Math.round(-1.5));  //output: -1
+console.log(Math.round(-2.5));  //output: -2
+console.log(Math.round(-1.49)); //output: -1
+console.log(Math.round(-1.51)); //output: -2
+console.log(Math.round(-1.05)); //output: -1
+```
+
 
 ## Numbers: Generating random numbers
 ## Numbers: Converting strings to integers and decimals
