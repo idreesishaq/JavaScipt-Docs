@@ -815,8 +815,6 @@ In summary,
 
 ## Numbers: Converting strings to numbers, numbers to strings
 
-## Numbers: Converting strings to numbers, numbers to strings
-
 `parseInt` converts a string into an integer and `parseFloat` converts a string representing a number into a floating-point number.
 
 You can finesse the distinction between integers and floating-point numbers by using `Number`
@@ -844,5 +842,14 @@ var prettyTotal = total.toFixed(2);
 console.log(prettyTotal);   //output: 10.60
 console.log(total.toFixed(5));  //output: 10.59618
 console.log(total.toFixed(3));  //output: 10.596
+```
+
+# Date and time
+
+## Getting the current data and time
+
+```
+var currentDateTime = new Date();
+//output: Wed Nov 29 2023 21:15:45 GMT+0500 (Pakistan Standard Time)
 ```
 
