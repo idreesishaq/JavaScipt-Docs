@@ -835,3 +835,14 @@ var floatFromStringWithLeadingSpaces = Number("   123.45"); // Output: 123.45
 var numAsNum = 12345;
 var numAsString = numAsNum.toString();
 console.log(numAsString);   //output: 12345
+
+## Numbers: Controlling the length of decimals
+
+```
+var total = 10.596175;
+var prettyTotal = total.toFixed(2);
+console.log(prettyTotal);   //output: 10.60
+console.log(total.toFixed(5));  //output: 10.59618
+console.log(total.toFixed(3));  //output: 10.596
+```
+
