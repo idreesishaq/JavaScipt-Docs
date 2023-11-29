@@ -608,21 +608,6 @@ For rounding a number there are multiple methods under **Math** object in JavaSc
 - If the fractional part (decimal) of the number is 0.5 or greater, the number is rounded up by adding 1 to the integer part.
 - If the fractional part is less than 0.5, the number is rounded down, and the decimal part is effectively discarded.
 
-|n|Math.round(n)|Math.ceil(n)|Math.floor(n)|
-|---|---|---|---|
-|1.5|2|2|1|
-|2.5|3|3|2|
-|-1.5|-1|-1|-2|
-|-2.5|-2|-2|-3|
-|1.51|2|2|1|
-|1.99|2|2|1|
-|-1.49|-1|-1|-2|
-|-1.01|-1|-1|-2|
-|1.49|1|2|1|
-|1.01|1|2|1|
-|-1.51|-2|-1|-2|
-|-1.99|-2|-1|-2|
-
 **Example**
 ```
 //Rounds up: when the fractional part is 0.5
@@ -694,6 +679,51 @@ console.log(Math.floor(-1.51));  //output: -2
 console.log(Math.floor(-1.99));  //output: -2
 ```
 
+|n|Math.round(n)|Math.ceil(n)|Math.floor(n)|
+|---|---|---|---|
+|1.5|2|2|1|
+|2.5|3|3|2|
+|-1.5|-1|-1|-2|
+|-2.5|-2|-2|-3|
+|1.51|2|2|1|
+|1.99|2|2|1|
+|-1.49|-1|-1|-2|
+|-1.01|-1|-1|-2|
+|1.49|1|2|1|
+|1.01|1|2|1|
+|-1.51|-2|-1|-2|
+|-1.99|-2|-1|-2|
+
+
 ## Numbers: Generating random numbers
+For generating a random number we have in JavaScript `Math.random()`. It generates **almost a random, technically known as ** *pseudo-random*, with 16 decimal places, ranging from 0.0000000000000000 through 0.9999999999999999.
+
+```
+var randomNumber = Math.random();
+```
+
+we can convert the decimal to an integer by multiplying by **one hundred quadrillion** (1 followed by 17 zeroes):
+
+**Generate a Random Number from 1 to 6**
+Now, if we want to simulate the throw of a die. We want six possible numbers 1 through 6. We multiply the giant decimal number to 6.
+
+```
+var randomNumber = Math.random()*6;
+```
+Here are the three examples
+
+**0.0000000000000000 * 6 = 0**
+
+**0.7554887836835311 * 6 = 4.532932702101187**
+
+**0.9999999999999999 * 6 = 5.999999999999999**
+
+```
+var bigDecimal = Math.random();
+var improvedNum = (bigDecimal*6)+1;
+var rollDice = Math.floor(improvedNum);
+console.log(rollDice);
+```
+
 ## Numbers: Converting strings to integers and decimals
 ## Numbers: Converting strings to numbers, numbers to strings
