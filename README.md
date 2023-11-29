@@ -814,3 +814,24 @@ In summary,
 - use `parseFloat` when you want to convert a string to a floating-point number.
 
 ## Numbers: Converting strings to numbers, numbers to strings
+
+## Numbers: Converting strings to numbers, numbers to strings
+
+`parseInt` converts a string into an integer and `parseFloat` converts a string representing a number into a floating-point number.
+
+You can finesse the distinction between integers and floating-point numbers by using `Number`
+
+```
+var intNum = Number("123");       // Output: 123
+var floatNum = Number("123.45");        // Output: 123.45
+var floatFromStringWithNonDigits = Number("123.45abc"); // Output: NaN
+
+var intFromStringWithLeadingSpaces = Number("   123"); // Output: 123
+var floatFromStringWithLeadingSpaces = Number("   123.45"); // Output: 123.45
+```
+
+**Convert numbers to string**
+```
+var numAsNum = 12345;
+var numAsString = numAsNum.toString();
+console.log(numAsString);   //output: 12345
