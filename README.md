@@ -604,29 +604,95 @@ For rounding a number there are multiple methods under **Math** object in JavaSc
 `Math.floor()`
 
 **`Math.round()`**
+- `Math.round()` rounds the number to the nearest integer.
 - If the fractional part (decimal) of the number is 0.5 or greater, the number is rounded up by adding 1 to the integer part.
 - If the fractional part is less than 0.5, the number is rounded down, and the decimal part is effectively discarded.
 
-|Math.round(number)|output|
-|---|---|
-|Math.round(1.5)|2|
-|Math.round(1.49)|1|
-|Math.round(-1.5)|-1|
-|Math.round(-2.5)|-2|
-|Math.round(-1.49)|-1|
-|Math.round(-1.51)|-2|
-|Math.round(-1.05)|-1|
+|n|Math.round(n)|Math.ceil(n)|Math.floor(n)|
+|---|---|---|---|
+|1.5|2|2|1|
+|2.5|3|3|2|
+|-1.5|-1|-1|-2|
+|-2.5|-2|-2|-3|
+|1.51|2|2|1|
+|1.99|2|2|1|
+|-1.49|-1|-1|-2|
+|-1.01|-1|-1|-2|
+|1.49|1|2|1|
+|1.01|1|2|1|
+|-1.51|-2|-1|-2|
+|-1.99|-2|-1|-2|
 
+**Example**
 ```
+//Rounds up: when the fractional part is 0.5
 console.log(Math.round(1.5));   //output: 2
+console.log(Math.round(2.5));   //output: 3
+console.log(Math.round(-1.5));   //output: -1
+console.log(Math.round(-2.5));   //output: -2
+
+//Rounds up: when the fractional part > 0.5
+console.log(Math.round(1.51));  //output: 2
+console.log(Math.round(1.99));  //output: 2
+console.log(Math.round(-1.49));  //output: -1
+console.log(Math.round(-1.01));  //output: -1
+
+//Rounds down: when the fractional part < 0.5
 console.log(Math.round(1.49));  //output: 1
-console.log(Math.round(-1.5));  //output: -1
-console.log(Math.round(-2.5));  //output: -2
-console.log(Math.round(-1.49)); //output: -1
-console.log(Math.round(-1.51)); //output: -2
-console.log(Math.round(-1.05)); //output: -1
+console.log(Math.round(1.01));  //output: 1
+console.log(Math.round(-1.51));  //output: -2
+console.log(Math.round(-1.99));  //output: -2
 ```
 
+**`Math.ceil()`**
+- Rounds a number up to the nearest integer.
+- Always rounds up, even if the fractional part is less than 0.5
+
+**Example**
+```
+//Rounds up: when the fractional part is 0.5
+console.log(Math.ceil(1.5));   //output: 2
+console.log(Math.ceil(2.5));   //output: 3
+console.log(Math.ceil(-1.5));   //output: -1
+console.log(Math.ceil(-2.5));   //output: -2
+
+//Rounds up: when the fractional part > 0.5
+console.log(Math.ceil(1.51));  //output: 2
+console.log(Math.ceil(1.99));  //output: 2
+console.log(Math.ceil(-1.49));  //output: -1
+console.log(Math.ceil(-1.01));  //output: -1
+
+//Rounds up: when the fractional part < 0.5
+console.log(Math.ceil(1.49));  //output: 2
+console.log(Math.ceil(1.01));  //output: 2
+console.log(Math.ceil(-1.51));  //output: -1
+console.log(Math.ceil(-1.99));  //output: -1
+```
+
+**`Math.floor`**
+- Rounds a number down to the nearest integer.
+- Always rounds down, even if the fractional part is 0.5 or greater.
+
+**Example**
+```
+//Rounds down: when the fractional part is 0.5
+console.log(Math.floor(1.5));   //output: 1
+console.log(Math.floor(2.5));   //output: 2
+console.log(Math.floor(-1.5));   //output: -2
+console.log(Math.floor(-2.5));   //output: -3
+
+//Rounds down: when the fractional part > 0.5
+console.log(Math.floor(1.51));  //output: 1
+console.log(Math.floor(1.99));  //output: 1
+console.log(Math.floor(-1.49));  //output: -2
+console.log(Math.floor(-1.01));  //output: -2
+
+//Rounds down: when the fractional part < 0.5
+console.log(Math.floor(1.49));  //output: 1
+console.log(Math.floor(1.01));  //output: 1
+console.log(Math.floor(-1.51));  //output: -2
+console.log(Math.floor(-1.99));  //output: -2
+```
 
 ## Numbers: Generating random numbers
 ## Numbers: Converting strings to integers and decimals
