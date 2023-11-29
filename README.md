@@ -726,4 +726,50 @@ console.log(rollDice);
 ```
 
 ## Numbers: Converting strings to integers and decimals
+
+Sometimes, JavaScript seems to read you mind, suppose you are trying to do math works for example multiple (*), divide (/), or subtruct (-) between two strings or one string and the other is number, JavaScript seems to understand that you want the string treated as a number, and does the math.
+
+**Arithmatic operations: when on is string & the other is number**
+```
+var profit = "200" - 50;
+console.log(profit, typeof(profit));    // 150 'number'
+
+var qty = "200" * 50;
+console.log(qty, typeof(qty));          // 10000 'number'
+
+var price = "200" / 50;
+console.log(price, typeof(price));      // 4 'number'
+```
+
+**Arithmatic operations: when the both are string**
+
+```
+var profit1 = "200" - "50";
+console.log(profit, typeof(profit1));   // 150 'number'
+
+var qty1 = "200" * "50";
+console.log(qty, typeof(qty1));         // 10000 'number'
+
+var price2 = "200" / "50";
+console.log(price2, typeof(price2));    // 4 'number'
+```
+
+If you write
+```
+var profit = "200" - "pencil";
+console.log(profit);        //NaN
+```
+**NaN** means **not a number**. No mystery here. How can 200 minus pencil a number.
+
+But, If you try to add two strings or a string and a number, JavaScript will do the opposite of what you see in the example above.
+
+JavaScipt concatenates them, rather then adding.
+```
+var margin = "200" + 50;
+console.log(margin, typeof(margin));    // 20050 string
+
+var margin2 = "200" + "50";
+console.log(margin2, typeof(margin2));  // 20050 string
+```
+
 ## Numbers: Converting strings to numbers, numbers to strings
