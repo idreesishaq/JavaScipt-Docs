@@ -829,10 +829,13 @@ var floatFromStringWithLeadingSpaces = Number("   123.45"); // Output: 123.45
 ```
 
 **Convert numbers to string**
+
 ```
 var numAsNum = 12345;
 var numAsString = numAsNum.toString();
 console.log(numAsString);   //output: 12345
+```
+
 
 ## Numbers: Controlling the length of decimals
 
