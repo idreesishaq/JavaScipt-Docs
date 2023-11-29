@@ -603,7 +603,7 @@ For rounding a number there are multiple methods under **Math** object in JavaSc
 `Math.ceil()`
 `Math.floor()`
 
-**`Math.round()`**
+### `Math.round()`
 - `Math.round()` rounds the number to the nearest integer.
 - If the fractional part (decimal) of the number is 0.5 or greater, the number is rounded up by adding 1 to the integer part.
 - If the fractional part is less than 0.5, the number is rounded down, and the decimal part is effectively discarded.
@@ -629,7 +629,7 @@ console.log(Math.round(-1.51));  //output: -2
 console.log(Math.round(-1.99));  //output: -2
 ```
 
-**`Math.ceil()`**
+### `Math.ceil()`
 - Rounds a number up to the nearest integer.
 - Always rounds up, even if the fractional part is less than 0.5
 
@@ -654,7 +654,7 @@ console.log(Math.ceil(-1.51));  //output: -1
 console.log(Math.ceil(-1.99));  //output: -1
 ```
 
-**`Math.floor`**
+### `Math.floor`
 - Rounds a number down to the nearest integer.
 - Always rounds down, even if the fractional part is 0.5 or greater.
 
@@ -771,5 +771,46 @@ console.log(margin, typeof(margin));    // 20050 string
 var margin2 = "200" + "50";
 console.log(margin2, typeof(margin2));  // 20050 string
 ```
+
+There is going to be a problem with the code below
+```
+var currentAge = prompt("Enter your age");
+var eligibleToGetLicence = currentAge + 2;
+console.log(eligibleToGetLicence);
+```
+if you give your age to the prompt 18, It treets as a string and rathen than adding 20, It will give "182".
+
+So to avoid this confusion we have methods in JavaScript to convert string into numbers `parseInt(string)` `and parseFloat(string)`
+
+```
+var currentAge = prompt("Enter your age");
+var eligibleToGetLicence = parseInt(currentAge) + 2;
+console.log(eligibleToGetLicence);
+```
+
+### `parseInt(string)` and `parseFloat(string)` 
+- `parseInt` converts all strings including strings comprising floating point numbers, to integers
+- `parseInt` doesn't round. It simply lops off the decimals.
+- `parseInt` Ignores leading whitespaces.
+- `parseFloat` converts a string to a floating-point number.
+- `parseFloat` Ignore leading whitespaces.
+
+**Example**
+```
+var intNum = parseInt("123");       // Output: 123
+var floatNum = parseInt("123.45");        // Output: 123
+var intNum2 = parseFloat("123");       // Output: 123
+var floatNum2 = parseFloat("123.45");    // Output: 123.45
+
+var intFromStringWithNonDigits = parseInt("123abc"); // Output: 123
+var floatFromStringWithNonDigits = parseFloat("123.45abc"); // Output: 123.45
+
+var intFromStringWithLeadingSpaces = parseInt("   123"); // Output: 123
+var floatFromStringWithLeadingSpaces = parseFloat("   123.45"); // Output: 123.45
+```
+
+In summary,
+- use `parseInt` when you want to convert a string to an integer.
+- use `parseFloat` when you want to convert a string to a floating-point number.
 
 ## Numbers: Converting strings to numbers, numbers to strings
