@@ -884,6 +884,54 @@ console.log(nameOfToday);	//Wed
 
 ## Extracting parts of the date and time
 
+|![extract_parts_of_the_date_and_time](resources/extract_parts_of_the_date_and_time.jpg)|
+|--|
+|*This image is taken from the book "A smarter way to learn JavaScript by Mark Myers.*|
+
+I have already shown, how to extract day. Similarly we can get day, date, month year etc.
+
+### `getMonth()`
+produces a month number from 0 for January to 11 for December.
+```
+var thisMonth = new Date().getMonth();
+```
+
+### `getDate()`
+gives you the day of the month.
+
+```
+var dayOfMonth = new Date().getDate();
+```
+
+### `getFullYear()`
+gives you the 4 digit year
+```
+var currentYear = new Date().getFullYear();
+```
+
+### `getHours()`
+gives you hour number from 0 to 23 corresponding to midnight through 11 p.m.
+```
+var currentHours = new Date().getHours();
+```
+
+### `getMinutes()`
+gives a number from 0 to 59
+```
+var currentMinuts = new Date().getMinutes();
+```
+
+### `getSeconds()`
+gives you seconds from 0 to 59
+```
+var currentSecs = new Date().getSeconds();
+```
+
+### `getMilliseconds()`
+gives you milliseconds from 0 to 999.
+```
+var currentMilliSecs = new Date().getMilliseconds();
+```
 
 ## Specifying a date and time
 ## Changing elements of a date and time
