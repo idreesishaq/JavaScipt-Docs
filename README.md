@@ -870,7 +870,21 @@ If you need the *Date object* to be string, you can convert it. As you do a numb
 var dateString = currentDateTime.toString();
 ```
 
+you can get the Day from the **date object** with the `getDay()` method. The day of today is shown as "Fri" in date object but, `getDay() gives the day as number, 0 "Sunday" through 6 for "Saturday".
+
+You can get the Day Name by making a array of days
+
+```
+var daysName = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+var now = new Date();
+var theDay = now.getDay();	//3
+var nameOfToday = daysName[theDay];
+console.log(nameOfToday);	//Wed
+```
+
 ## Extracting parts of the date and time
+
+
 ## Specifying a date and time
 ## Changing elements of a date and time
 
