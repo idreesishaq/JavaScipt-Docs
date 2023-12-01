@@ -933,6 +933,12 @@ gives you milliseconds from 0 to 999.
 var currentMilliSecs = new Date().getMilliseconds();
 ```
 
+### `getTime()`
+gives you the number count of milliseconds that have passed since the start of January 1, 1970, midnight.
+```
+var millSecSince = new Date().getTime();
+```
+
 ## Specifying a date and time
 ## Changing elements of a date and time
 
