@@ -1086,6 +1086,23 @@ tellMeTime();
 
 
 ## Functions: Passing them data
+```
+function greetVisitor(greeting) {
+	alert(greeting)
+}
+
+```
+
+```
+function winnersCall(m, string, num) {
+	alert (m + string + num);
+}
+```
+Now here's the statement that calls the function
+```
+var month = "April";
+winnersCall(month, "'s winner number is ", 17);
+```
 
 ## Functions: Passing data back from them
 
