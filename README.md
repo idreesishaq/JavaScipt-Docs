@@ -979,6 +979,83 @@ var timeLeftInYrs = timeLeft/1000/60/60/24/365;
 console.log(timeLeftInYrs);
 ```
 
+Here, is the whole code condensed into something that is efficient, abridged and looks more like production code.
+
+```
+var timeLeft = new Date("June 30, 2040").getTime() - new Date().getTime();
+var yearsTillOlympics2040 = (timeLeft/1000/60/60/24/365);
+console.log(yearsTillOlympics2040)
+```
+
+You can also specify time, if it means to you.
+
+```
+var d = new Date("June 5, 1973 14:20:00");
+```
+no comma after the date. Colons seperating 24-hour time (hh:mm:ss).
+
 
 ## Changing elements of a date and time
 
+|Method|Example|Result|
+|-----|-----|-----|
+|setFullYear( )|d.setFullYear(2005)|Year is 2005|
+|setMonth( )|d.setFullYear(5)|Month is 5 (June)|
+|setDate( )|d.setDate(5)|Day of the month is 5|
+|setHours( )|d.setHours(5)|5 a.m|
+|setMinutes( )|d.setMinutes(5)|5 Minutes past the hour|
+|setSeconds( )|d.setSeconds(55)|55 seconds past the minute|
+|setMilliseconds( )|d.setMilliseconds(5)|5 milliseconds past the second|
+
+**note: d is the variable representing the Date object**
+
+### `setFullYear()`
+`setFullYear()` sets the **year** of an existing Date object, leaving all other elements of Date object unchanged
+```
+var d = new Date();
+d.setFullYear(1947);
+```
+
+
+### `setMonth()`
+`setMonth()` sets the **month** of an existing Date object, leaving all other elements of Date object unchanged
+```
+var d = new Date();
+d.setMonth(7);
+```
+
+### `setDate()`
+`setDate()` sets the **date** of an existing Date object, leaving all other elements of Date object unchanged
+```
+var d = new Date();
+d.setDate(14);
+```
+
+### `setHours()`
+`setHours()` sets the **hours** of an existing Date object, leaving all other elements of Date object unchanged
+
+```
+var d = new Date();
+d.setHours(6);
+```
+
+### `setMinutes()`
+`setMinutes()` sets the **minutes** of an existing Date object, leaving all other elements of Date object unchanged
+```
+var d = new Date();
+d.setMinutes(5);
+```
+
+### `setSeconds()`
+`setSeconds()` sets the **seconds** of an existing Date object, leaving all other elements of Date object unchanged
+```
+var d = new Date();
+d.setSeconds(7);
+```
+
+### `setMilliseconds()`
+`setMilliseconds()` sets the **milliseconds** of an existing Date object, leaving all other elements of Date object unchanged
+```
+var d = new Date();
+d.setMilliseconds(555);
+```
