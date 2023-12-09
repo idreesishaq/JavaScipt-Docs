@@ -1059,3 +1059,35 @@ d.setSeconds(7);
 var d = new Date();
 d.setMilliseconds(555);
 ```
+<hr>
+
+# Functions
+
+In JavaScript, a function is a reusable block of code that performs a specific task or set of tasks. Functions allow you to organize code into modular units, making it easier to manage, understand, and reuse. Functions does the same thing again and again robotically whenever you invoke its name, no matter how far the defining function block is.  Functions in JavaScript can be defined using the function keyword.
+
+```
+function tellMeTime() {
+    var now = new Date();
+    var theHr = now.getHours();
+    var theMin = now.getMinutes();
+    alert("The current time is " + theHr + ":" + theMin);
+}
+	
+```
+Here is a small function that wraps codes that tell time. When ever you want to know the current time, you don't need to create date object and extract time every time, you just invoke the function by its name including its parenthese.
+```
+tellMeTime();
+```
+- You can give any legal variable name to a function.
+- Function-naming follows the same rule as variable naming.
+- Technically, a function is a varaible.
+- In JavaScript, function declarations are hoisted. Hoisting is a behavior where variable and function declarations are moved to the top of their containing scope during the compilation phase, before the code is executed. So, they're called by the main code, they're already loaded in memory and ready to go.
+
+
+
+## Functions: Passing them data
+
+## Functions: Passing data back from them
+
+## Local vs. Global variables
+
