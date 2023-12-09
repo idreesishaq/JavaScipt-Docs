@@ -182,6 +182,8 @@ This set of conditions has four criteria, which are combined with "**&&**" that 
 |age > 65 | age < 21 or Resident of Pakistan |
 |---|---|
 
+<hr>
+
 # *if* statements nested
 
 Check out this code.
@@ -211,6 +213,8 @@ else {
 	e = f;
 }
 ```
+<hr>
+
 <hr>
 
 # Arrays
@@ -326,6 +330,8 @@ console.log(newPets);
 //output (2) ['cat', 'bird']
 ```
 
+<hr>
+
 # for loops
 
 ```
@@ -357,6 +363,8 @@ console.log(fullNames);
 //output (20) ['Idrees Ali', 'Idrees Ahmed', 'Idrees Siddiq', 'Idrees Hashim', 'Ishaq Ali', 'Ishaq Ahmed', 'Ishaq Siddiq', 'Ishaq Hashim', 'Hamza Ali', 'Hamza Ahmed', 'Hamza Siddiq', 'Hamza Hashim', 'Usman Ali', 'Usman Ahmed', 'Usman Siddiq', 'Usman Hashim', 'Irfan Ali', 'Irfan Ahmed', 'Irfan Siddiq', 'Irfan Hashim']
 ```
 
+<hr>
+
 # Changing case
 
 ## toLowerCase()
@@ -383,6 +391,8 @@ console.log(citiesInUpperCase);
 
 //output: (5) ['KARACHI', 'HYDERABAD', 'LAHORE', 'PESHAWAR', 'ISLAMABAD']
 ```
+
+<hr>
 
 # Strings
 ## Strings: Measuring length and extracting parts
@@ -594,6 +604,8 @@ console.log(newText);
 ```
 
 **Note: In JavaScript, the replace method is used to replace a specified substring or pattern (by using of regular expression as search parameter).**
+
+<hr>
 
 # Numbers
 
@@ -847,6 +859,8 @@ console.log(total.toFixed(5));  //output: 10.59618
 console.log(total.toFixed(3));  //output: 10.596
 ```
 
+<hr>
+
 # Date and time
 
 ## Getting the current data and time
@@ -940,5 +954,31 @@ var millSecSince = new Date().getTime();
 ```
 
 ## Specifying a date and time
+
+create a date object
+```
+var rightNow = new Date();
+```
+I am going to find that how many years left *2040 Summer Olympics* to be held. I don't know the exact date, but I pick the middle to the year June 30, to pin down the exact date in 2040.
+Now, create a date object with date specifying
+```
+var olympics2040 = new Date("June 30, 2040");
+```
+
+we can calculate the time in milliseconds from a reference date (January 1, 1970) by `getTime()` method and taking a difference from the current date, we can get that how many time is left to **Summer Olympics 2040** be held
+
+```
+var msolympics2040 = olympics2040.getTime();
+var msRightNow = rightNow.getTime();
+var timeLeft = msolympics2040 - msRightNow;
+```
+
+Now convert back the time in milliseconds to Years
+```
+var timeLeftInYrs = timeLeft/1000/60/60/24/365;
+console.log(timeLeftInYrs);
+```
+
+
 ## Changing elements of a date and time
 
