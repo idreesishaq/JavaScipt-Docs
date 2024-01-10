@@ -29,14 +29,15 @@
 alert("Hello World!");
 ```
 # Variables
-```
+```JavaScript
 var name = "Idrees";
 var nationality = "Pakistan";
 var weight = "150";
 var caseQty = 144;
 ```
+
 # Math expressions
-```
+```JavaScript
 var commonNumber = 2 + 2;
 var commonNumber = 12 - 24;
 var commonNumber = 4 * 12;
@@ -45,8 +46,9 @@ var commonNumber = 300;
 var commonNumber = 15 / 4;
 var remainder = 15 % 4;
 ```
+
 ### increment / decrement
-```
+```JavaScript
 num++; //post increment
 num--; //post decrement
 ++num; //pre-increment
@@ -54,27 +56,31 @@ num--; //post decrement
 num = num + 1;
 num = num - 1;
 ```
+
 ### Eliminating ambiguity
-```
+```JavaScript
 var totalCost = 4*12+3+120*5;
 var totalCost = 4*(12+3)*2+3 //123
 var totalCost = 4*(12+3)*(2+3) //300
 ```
+
 # Concatenating Text String
-```
+```JavaScript
 var message = "Assalamo Alaikum";
 var name = "Idrees";
 var username = "Norman"
 alert(message +" "+ name)	//"Assalamo Alaikum Idrees"
 alert("Thanks " + username)	//"Thanks Norman"
 ```
+
 # Prompts
-```
+```JavaScript
 var name = prompt ("What's your name?");
 var numberOfPets = prompt ("How many pets?");
 ```
+
 # *if* statements
-```
+```JavaScript
 var x = prompt("What is the biggest continent in the world?");
 if (x === "Asia") {
 	alert("Correct");
@@ -92,23 +98,25 @@ if (x === "Asia") {
 != is not equal to (true if the value does not match regardless of the type)
 
 
+```JavaScript
+if (1 > 0) {//...code...}
+if (0 < 1) {//...code...}
+if (1 >= 0) {//...code...}
+if (1 >= 1) {//...code...}
+if (1 <= 1) {//...code...}
 ```
-if (1 > 0) {...code...}
-if (0 < 1) {...code...}
-if (1 >= 0) {...code...}
-if (1 >= 1) {...code...}
-if (1 <= 1) {...code...}
-```
+
 # *if*... *else* and *elseif* statements
 ### if (true)
-```
+```JavaScript
 var x = prompt("Which is the biggest continent in the world?");
 if ( x === "Asia") {
 	alert("Correct!");
 }
 ```
+
 ### if (true) or if(false)
-```
+```JavaScript
 var x = prompt("Which is the biggest continent in the world?");
 if ( x === "Asia") {
 	alert("Correct!");
@@ -117,8 +125,9 @@ if (x !== "Asia") {
 	alert("Wrong answer");
 }
 ```
+
 ### if (true) or else
-```
+```JavaScript
 var x = prompt("Which is the biggest continent in the world?");
 if ( x === "Asia") {
 	alert("Correct!");
@@ -127,8 +136,9 @@ else {
 	alert("Wrong answer");
 }
 ```
+
 ### if, elseif, else
-```
+```JavaScript
 var correctAnswer = "Asia";
 if (x === correctAnswer) {
 	alert("Correct!");
@@ -140,6 +150,7 @@ else {
 alert ("Incorrect");
 }
 ```
+
 # Testing sets of conditions
 Consider an School has a 100 meter running test for the criteria to qualify  to join sport team.
 
@@ -187,7 +198,7 @@ This set of conditions has four criteria, which are combined with "**&&**" that 
 # *if* statements nested
 
 Check out this code.
-```
+```JavaScript
 if ((x === y || a === b ) && c === d) {
 	g = h;
 }
@@ -197,7 +208,7 @@ else {
 ```
 
 and this (nested if statements)
-```
+```JavaScript
 if (c === d) {
 	if(x === y ) {
 		g = h;
@@ -220,7 +231,7 @@ else {
 # Arrays
 Assigning of some string values to some variabls.
 
-```
+```JavaScript
 var city0 = "Karachi";
 var city1 = "Lahore";
 var city2 = "Islamabad";
@@ -231,19 +242,19 @@ var city6 = "Quetta";
 ```
 This is how we can create an array under a single container;
 
-```
+```JavaScript
 var cities = ["Karachi", "Lahore", "Islamabad", "Faisalabad", "Multan", "Peshawar", "Quetta"];
 ```
 
 Mixed array
-```
+```JavaScript
 var mixedArray = [23, "Idrees", true, "2023"];
 ```
 
 # Arrays: Adding and removing elements
 
 You can assign or change a variable values whenever you like
-```
+```JavaScript
 var pets = [];
 pets[0] = "dog";
 pets[1] = "cat";
@@ -257,7 +268,7 @@ console.log(pets) // ['dog', 'cat', 'bird', 'lizard', 'snake']
 ## array.pop
 Using the **pop** keyword, you can remove the last element of an array.
 
-```
+```JavaScript
 pets.pop();
 console.log(pets)	//['dog', 'cat', 'bird', 'lizard']
 ```
@@ -265,7 +276,7 @@ console.log(pets)	//['dog', 'cat', 'bird', 'lizard']
 ## array.push
 Using the **push** keyword, you can add one or more elements to the end of an array.
 
-```
+```JavaScript
 pets.push("fish", "ferret");
 console.log(pets);	['dog', 'cat', 'bird', 'lizard', 'fish', 'ferret']
 ```
@@ -273,7 +284,7 @@ console.log(pets);	['dog', 'cat', 'bird', 'lizard', 'fish', 'ferret']
 ## array.shift
 Use the **shift** method to remove an element from the beginning of an array.
 
-```
+```JavaScript
 pets = ['dog', 'cat', 'bird', 'lizard', 'fish', 'ferret'];
 pets.shift();
 
@@ -283,12 +294,11 @@ console.log(pets);	//['cat', 'bird', 'lizard', 'fish', 'ferret'];
 ## array.unshift
 use the **unshift** method to add one or more elements to the beginning of an array.
 
-```
+```JavaScript
 pets = ['cat', 'bird', 'lizard', 'fish', 'ferret'];
 pets.unshift('lion', 'elephant');
 
 console.log(pets)	//['lion', 'elephant', 'cat', 'bird', 'lizard', 'fish', 'ferret'];
-
 ```
 
 ## array.splice 
@@ -297,7 +307,7 @@ console.log(pets)	//['lion', 'elephant', 'cat', 'bird', 'lizard', 'fish', 'ferre
 Use the **splice** method to insert one or more elements anywhere in an array, while optionally, removing one or more elements that come after it.
 The following code 
 
-```
+```JavaScript
 pets = ['lion', 'elephant', 'cat', 'bird', 'lizard', 'fish', 'ferret'];
 pets.splice(2, 2, "pig", "duck", "emu");
 
@@ -311,7 +321,7 @@ and the following arguments are the elements to be add.
 **using splice method to insert new elements only**
 you could make additions without removing any elements
 
-```
+```JavaScript
 pets = ['lion', 'elephant', 'cat', 'bird', 'lizard', 'fish', 'ferret'];
 pets.splice(2, 0, 'pig', 'duck', 'emu');
 console.log(pets);	
@@ -322,7 +332,7 @@ console.log(pets);
 ## array.slice
 **use the slice method to copy one or more any consecutive elements in any position and put them into a new array**
 
-```
+```JavaScript
 pets = ['lion', 'elephant', 'cat', 'bird', 'lizard', 'fish', 'ferret'];
 var newPets = pets.slice(2,4);
 console.log(newPets);
@@ -334,7 +344,7 @@ console.log(newPets);
 
 # for loops
 
-```
+```JavaScript
 var cleanestCities = ["helsinki", "islamabad", "melbourne", "oslo", "bogota", "minneapolis"];
 var cityToCheck = "islamabad";
 
@@ -349,7 +359,7 @@ for (var i = 0; i<=4; i++ ) {
 
 # for loops nested
 
-```
+```JavaScript
 var firstNames = ["Idrees", "Ishaq", "Hamza", "Usman", "Irfan"];
 var lastNames = ["Ali", "Ahmed", "Siddiq", "Hashim"];
 var fullNames = [];
@@ -368,7 +378,7 @@ console.log(fullNames);
 # Changing case
 
 ## toLowerCase()
-```
+```JavaScript
 var cities = ["karachi", "HyderAbad", "LahOre", "PesHaWar", "IsLamABAD"];
 var citiesInLowerCase = [];
 for (var i =0 ; i < cities.length; i++ ) {
@@ -381,7 +391,7 @@ console.log(citiesInLowerCase);
 
 ## toUpperCase()
 
-```
+```JavaScript
 var cities = ["karachi", "HyderAbad", "LahOre", "PesHaWar", "IsLamABAD"];
 var citiesInUpperCase = [];
 for (var i =0 ; i < cities.length; i++ ) {
@@ -398,19 +408,19 @@ console.log(citiesInUpperCase);
 ## Strings: Measuring length and extracting parts
 
 ### extracting first character
-```
+```JavaScript
 var firstChar = "idrees".slice(0,1);
 console.log(firstChar);		//output: "i"
 ```
 ### extracting remaining characters
 
-```
+```JavaScript
 var someChars = "idrees".slice(1,6);
 console.log(someChars);		//output: "drees"
 ```
 or you can omit the second argument inside the parenthese, either for precise or if you don't know the lenght of the text, JavaScript includes all the characters to the end of the string. 
 
-```
+```JavaScript
 var someChars = "idrees".slice(1);
 console.log(someChars);		//output: "drees"
 ```
@@ -418,7 +428,7 @@ console.log(someChars);		//output: "drees"
 ### to Capitalize
 Now we have a way to capitalize the first characters of a string and insure that the remaining letters are lower-case.
 
-```
+```JavaScript
 var myName = "idreEs";
 var capName = myName.slice(0,1).toUpperCase() + myName.slice(1).toLowerCase();
 console.log(capName);
@@ -427,7 +437,7 @@ console.log(capName);
 ```
 
 Similarly, we can capitalize the every element of an array list.
-```
+```JavaScript
 var cities = ["karachi", "HyderAbad", "LahOre", "PesHaWar", "IsLamABAD"];
 var citiesToCap = [];
 for (var i =0 ; i < cities.length; i++ ) {
@@ -441,7 +451,7 @@ console.log(citiesToCap);
 ### check double space
 You can use the `slice` method for space limitation.
 
-```
+```JavaScript
 var str = prompt ("Enter some text");
 var numChars = str.length;
 for (var i = 0; i < numChars; i++){
@@ -455,7 +465,7 @@ for (var i = 0; i < numChars; i++){
 ### Finding and replace an string segments without any method
 The below code will find the text "javascript" and change it with "JavaScript".
 
-```
+```JavaScript
 var text = "javascript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web,alongside HTML and CSS. As of 2023, 98.7% of websites use javascript on the client side for webpage behavior, often incorporating third-party libraries.javascript was invented by Brendan Eich in 1995. Javascript is a case-sensitve language and an interpreted language.";
 
 for (var i = 0; i < text.length; i++){
@@ -469,14 +479,14 @@ console.log(text);
 ### Finding and replace with method `indexOf`
 JavaScript has a more efficient way to accomplish the above task, using the `indexOf` method.
 
-```
+```JavaScript
 var firstChar = text.indexOf("javascript");
 console.log(firstChar);
 ```
 
 Now, we can replace the incorrect spelling "javascript" with the correct and official spelling of "JavaScript" (with a capital "J" and "S") with less coding.
 
-```
+```JavaScript
 var text = "javascript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web,alongside HTML and CSS. As of 2023, 98.7% of websites use javascript on the client side for webpage behavior, often incorporating third-party libraries.javascript was invented by Brendan Eich in 1995. Javascript is a case-sensitve language and an interpreted language.";
 
 var firstChar = text.indexOf("javascript");
@@ -492,7 +502,7 @@ console.log(text);
 
 ### overcome the limitation with looping
 
-```
+```JavaScript
 var text = "javascript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web,alongside HTML and CSS. As of 2023, 98.7% of websites use javascript on the client side for webpage behavior, often incorporating third-party libraries.javascript was invented by Brendan Eich in 1995. Javascript is a case-sensitve language and an interpreted language.";
 
 var searchTerm = "javascript";
@@ -510,7 +520,7 @@ console.log(text);
 
 Similarly, to find the last instance of a segment in a string, use `lastIndexOf`.
 
-```
+```JavaScript
 var text = "To be or not to be";
 var segIndex = text.lastIndexOf("be");
 console.log(segIndex);
@@ -520,28 +530,28 @@ console.log(segIndex);
 
 ## Strings: Finding a character at a location
 You already know
-```
+```JavaScript
 var firstName = "Idrees";
 var firstChar = firstName.slice(0,1);
 console.log(firstChar);     //output: "I";
 ```
 
 Here's is alternate way to do it that's more direct.
-```
+```JavaScript
 var firstName = "Idrees";
 var firstChar = firstName.charAt(0);
 console.log(firstChar);     //output: "I";
 ```
 
 The following code finds the last character in the string
-```
+```JavaScript
 var firstName = "Idrees";
 var firstChar = firstName.charAt(firstName.length-1);
 console.log(firstChar);     //output: "s";
 ```
 
 The following code cycles through a string looking for 'At sign' @ symbol. If the character is found, an alert displays.
-```
+```JavaScript
 var anEmail = "example@email.com";
 for (var i = 0; i < anEmail.length; i++){
     if (anEmail.charAt(i) === "@") {
@@ -558,7 +568,7 @@ for (var i = 0; i < anEmail.length; i++){
 previously, you have leaned two different ways to replace "javascript" with the "JavaScript" in a string.
 
 First **loop-and-slice approach**
-```
+```JavaScript
 var text = "javascript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web,alongside HTML and CSS. As of 2023, 98.7% of websites use this language on the client side for webpage behavior, often incorporating third-party libraries.";
 
 for (var i = 0; i < text.length; i++){
@@ -570,7 +580,7 @@ console.log(text);
 ```
 
 Second, **using indexOf method**
-```
+```JavaScript
 var text = "javascript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web,alongside HTML and CSS. As of 2023, 98.7% of websites use this language on the client side for webpage behavior, often incorporating third-party libraries.";
 
 var firstChar = text.indexOf("javascript");
@@ -583,11 +593,11 @@ console.log(text);
 **But JavaScript provides a more straightforward way still, the `replace` method.**
 
 **Syntax of `string.replace`**
-```
+```JavaScript
 var newString = string.replace("segment to be replace", "segment to be insterted");
 ```
 
-```
+```JavaScript
 var text = "javascript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web,alongside HTML and CSS. As of 2023, 98.7% of websites use javascript on the client side for webpage behavior, often incorporating third-party libraries. javascript was invented by Brendan Eich in 1995. javascript is a case-sensitve language and an interpreted language.";
 
 var newText = text.replace("javascript", "JavaScript");
@@ -596,7 +606,7 @@ console.log(newText);
 
 But only the first instance of string is replace, to replace all instances you must let JavaScript know that you want a **global replace**
 
-```
+```JavaScript
 var text = "javascript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web,alongside HTML and CSS. As of 2023, 98.7% of websites use javascript on the client side for webpage behavior, often incorporating third-party libraries. javascript was invented by Brendan Eich in 1995. javascript is a case-sensitve language and an interpreted language.";
 
 var newText = text.replace(/javascript/g, "JavaScript");
@@ -621,7 +631,7 @@ For rounding a number there are multiple methods under **Math** object in JavaSc
 - If the fractional part is less than 0.5, the number is rounded down, and the decimal part is effectively discarded.
 
 **Example**
-```
+```JavaScript
 //Rounds up: when the fractional part is 0.5
 console.log(Math.round(1.5));   //output: 2
 console.log(Math.round(2.5));   //output: 3
@@ -646,7 +656,7 @@ console.log(Math.round(-1.99));  //output: -2
 - Always rounds up, even if the fractional part is less than 0.5
 
 **Example**
-```
+```JavaScript
 //Rounds up: when the fractional part is 0.5
 console.log(Math.ceil(1.5));   //output: 2
 console.log(Math.ceil(2.5));   //output: 3
@@ -671,7 +681,7 @@ console.log(Math.ceil(-1.99));  //output: -1
 - Always rounds down, even if the fractional part is 0.5 or greater.
 
 **Example**
-```
+```JavaScript
 //Rounds down: when the fractional part is 0.5
 console.log(Math.floor(1.5));   //output: 1
 console.log(Math.floor(2.5));   //output: 2
@@ -710,7 +720,7 @@ console.log(Math.floor(-1.99));  //output: -2
 ## Numbers: Generating random numbers
 For generating a random number we have in JavaScript `Math.random()`. It generates **almost a random, technically known as ** *pseudo-random*, with 16 decimal places, ranging from 0.0000000000000000 through 0.9999999999999999.
 
-```
+```JavaScript
 var randomNumber = Math.random();
 ```
 
@@ -719,7 +729,7 @@ we can convert the decimal to an integer by multiplying by **one hundred quadril
 **Generate a Random Number from 1 to 6**
 Now, if we want to simulate the throw of a die. We want six possible numbers 1 through 6. We multiply the giant decimal number to 6.
 
-```
+```JavaScript
 var randomNumber = Math.random()*6;
 ```
 Here are the three examples
@@ -730,7 +740,7 @@ Here are the three examples
 
 **0.9999999999999999 * 6 = 5.999999999999999**
 
-```
+```JavaScript
 var bigDecimal = Math.random();
 var improvedNum = (bigDecimal*6)+1;
 var rollDice = Math.floor(improvedNum);
@@ -742,7 +752,7 @@ console.log(rollDice);
 Sometimes, JavaScript seems to read you mind, suppose you are trying to do math works for example multiple (*), divide (/), or subtruct (-) between two strings or one string and the other is number, JavaScript seems to understand that you want the string treated as a number, and does the math.
 
 **Arithmatic operations: when on is string & the other is number**
-```
+```JavaScript
 var profit = "200" - 50;
 console.log(profit, typeof(profit));    // 150 'number'
 
@@ -755,7 +765,7 @@ console.log(price, typeof(price));      // 4 'number'
 
 **Arithmatic operations: when the both are string**
 
-```
+```JavaScript
 var profit1 = "200" - "50";
 console.log(profit, typeof(profit1));   // 150 'number'
 
@@ -767,7 +777,7 @@ console.log(price2, typeof(price2));    // 4 'number'
 ```
 
 If you write
-```
+```JavaScript
 var profit = "200" - "pencil";
 console.log(profit);        //NaN
 ```
@@ -776,7 +786,7 @@ console.log(profit);        //NaN
 But, If you try to add two strings or a string and a number, JavaScript will do the opposite of what you see in the example above.
 
 JavaScipt concatenates them, rather then adding.
-```
+```JavaScript
 var margin = "200" + 50;
 console.log(margin, typeof(margin));    // 20050 string
 
@@ -785,7 +795,7 @@ console.log(margin2, typeof(margin2));  // 20050 string
 ```
 
 There is going to be a problem with the code below
-```
+```JavaScript
 var currentAge = prompt("Enter your age");
 var eligibleToGetLicence = currentAge + 2;
 console.log(eligibleToGetLicence);
@@ -794,7 +804,7 @@ if you give your age to the prompt 18, It treets as a string and rathen than add
 
 So to avoid this confusion we have methods in JavaScript to convert string into numbers `parseInt(string)` `and parseFloat(string)`
 
-```
+```JavaScript
 var currentAge = prompt("Enter your age");
 var eligibleToGetLicence = parseInt(currentAge) + 2;
 console.log(eligibleToGetLicence);
@@ -808,7 +818,7 @@ console.log(eligibleToGetLicence);
 - `parseFloat` Ignore leading whitespaces.
 
 **Example**
-```
+```JavaScript
 var intNum = parseInt("123");       // Output: 123
 var floatNum = parseInt("123.45");        // Output: 123
 var intNum2 = parseFloat("123");       // Output: 123
@@ -831,7 +841,7 @@ In summary,
 
 You can finesse the distinction between integers and floating-point numbers by using `Number`
 
-```
+```JavaScript
 var intNum = Number("123");       // Output: 123
 var floatNum = Number("123.45");        // Output: 123.45
 var floatFromStringWithNonDigits = Number("123.45abc"); // Output: NaN
@@ -842,7 +852,7 @@ var floatFromStringWithLeadingSpaces = Number("   123.45"); // Output: 123.45
 
 **Convert numbers to string**
 
-```
+```JavaScript
 var numAsNum = 12345;
 var numAsString = numAsNum.toString();
 console.log(numAsString);   //output: 12345
@@ -851,7 +861,7 @@ console.log(numAsString);   //output: 12345
 
 ## Numbers: Controlling the length of decimals
 
-```
+```JavaScript
 var total = 10.596175;
 var prettyTotal = total.toFixed(2);
 console.log(prettyTotal);   //output: 10.60
@@ -865,7 +875,7 @@ console.log(total.toFixed(3));  //output: 10.596
 
 ## Getting the current data and time
 
-```
+```JavaScript
 var currentDateTime = new Date();
 //output: Wed Nov 29 2023 21:15:45 GMT+0500 (Pakistan Standard Time)
 ```
@@ -880,7 +890,7 @@ The date object is looking like a string but, it's not. You you cannot use strin
 
 If you need the *Date object* to be string, you can convert it. As you do a number to a string
 
-```
+```JavaScript
 var dateString = currentDateTime.toString();
 ```
 
@@ -888,7 +898,7 @@ you can get the Day from the **date object** with the `getDay()` method. The day
 
 You can get the Day Name by making a array of days
 
-```
+```JavaScript
 var daysName = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
 var now = new Date();
 var theDay = now.getDay();	//3
@@ -906,82 +916,82 @@ I have already shown, how to extract day. Similarly we can get day, date, month 
 
 ### `getMonth()`
 produces a month number from 0 for January to 11 for December.
-```
+```JavaScript
 var thisMonth = new Date().getMonth();
 ```
 
 ### `getDate()`
 gives you the day of the month.
 
-```
+```JavaScript
 var dayOfMonth = new Date().getDate();
 ```
 
 ### `getFullYear()`
 gives you the 4 digit year
-```
+```JavaScript
 var currentYear = new Date().getFullYear();
 ```
 
 ### `getHours()`
 gives you hour number from 0 to 23 corresponding to midnight through 11 p.m.
-```
+```JavaScript
 var currentHours = new Date().getHours();
 ```
 
 ### `getMinutes()`
 gives a number from 0 to 59
-```
+```JavaScript
 var currentMinuts = new Date().getMinutes();
 ```
 
 ### `getSeconds()`
 gives you seconds from 0 to 59
-```
+```JavaScript
 var currentSecs = new Date().getSeconds();
 ```
 
 ### `getMilliseconds()`
 gives you milliseconds from 0 to 999.
-```
+```JavaScript
 var currentMilliSecs = new Date().getMilliseconds();
 ```
 
 ### `getTime()`
 gives you the number count of milliseconds that have passed since the start of January 1, 1970, midnight.
-```
+```JavaScript
 var millSecSince = new Date().getTime();
 ```
 
 ## Specifying a date and time
 
 create a date object
-```
+```JavaScript
 var rightNow = new Date();
 ```
 I am going to find that how many years left *2040 Summer Olympics* to be held. I don't know the exact date, but I pick the middle to the year June 30, to pin down the exact date in 2040.
 Now, create a date object with date specifying
-```
+```JavaScript
 var olympics2040 = new Date("June 30, 2040");
 ```
 
 we can calculate the time in milliseconds from a reference date (January 1, 1970) by `getTime()` method and taking a difference from the current date, we can get that how many time is left to **Summer Olympics 2040** be held
 
-```
+```JavaScript
 var msolympics2040 = olympics2040.getTime();
 var msRightNow = rightNow.getTime();
 var timeLeft = msolympics2040 - msRightNow;
 ```
 
 Now convert back the time in milliseconds to Years
-```
+```JavaScript
 var timeLeftInYrs = timeLeft/1000/60/60/24/365;
 console.log(timeLeftInYrs);
 ```
 
 Here, is the whole code condensed into something that is efficient, abridged and looks more like production code.
 
-```
+```JavaScript
 var timeLeft = new Date("June 30, 2040").getTime() - new Date().getTime();
 var yearsTillOlympics2040 = (timeLeft/1000/60/60/24/365);
 console.log(yearsTillOlympics2040)
@@ -989,7 +999,7 @@ console.log(yearsTillOlympics2040)
 
 You can also specify time, if it means to you.
 
-```
+```JavaScript
 var d = new Date("June 5, 1973 14:20:00");
 ```
 no comma after the date. Colons seperating 24-hour time (hh:mm:ss).
@@ -1011,7 +1021,7 @@ no comma after the date. Colons seperating 24-hour time (hh:mm:ss).
 
 ### `setFullYear()`
 `setFullYear()` sets the **year** of an existing Date object, leaving all other elements of Date object unchanged
-```
+```JavaScript
 var d = new Date();
 d.setFullYear(1947);
 ```
@@ -1019,14 +1029,14 @@ d.setFullYear(1947);
 
 ### `setMonth()`
 `setMonth()` sets the **month** of an existing Date object, leaving all other elements of Date object unchanged
-```
+```JavaScript
 var d = new Date();
 d.setMonth(7);
 ```
 
 ### `setDate()`
 `setDate()` sets the **date** of an existing Date object, leaving all other elements of Date object unchanged
-```
+```JavaScript
 var d = new Date();
 d.setDate(14);
 ```
@@ -1034,28 +1044,28 @@ d.setDate(14);
 ### `setHours()`
 `setHours()` sets the **hours** of an existing Date object, leaving all other elements of Date object unchanged
 
-```
+```JavaScript
 var d = new Date();
 d.setHours(6);
 ```
 
 ### `setMinutes()`
 `setMinutes()` sets the **minutes** of an existing Date object, leaving all other elements of Date object unchanged
-```
+```JavaScript
 var d = new Date();
 d.setMinutes(5);
 ```
 
 ### `setSeconds()`
 `setSeconds()` sets the **seconds** of an existing Date object, leaving all other elements of Date object unchanged
-```
+```JavaScript
 var d = new Date();
 d.setSeconds(7);
 ```
 
 ### `setMilliseconds()`
 `setMilliseconds()` sets the **milliseconds** of an existing Date object, leaving all other elements of Date object unchanged
-```
+```JavaScript
 var d = new Date();
 d.setMilliseconds(555);
 ```
@@ -1065,7 +1075,7 @@ d.setMilliseconds(555);
 
 In JavaScript, a function is a reusable block of code that performs a specific task or set of tasks. Functions allow you to organize code into modular units, making it easier to manage, understand, and reuse. Functions does the same thing again and again robotically whenever you invoke its name, no matter how far the defining function block is.  Functions in JavaScript can be defined using the function keyword.
 
-```
+```JavaScript
 function tellMeTime() {
     var now = new Date();
     var theHr = now.getHours();
@@ -1075,7 +1085,7 @@ function tellMeTime() {
 	
 ```
 Here is a small function that wraps codes that tell time. When ever you want to know the current time, you don't need to create date object and extract time every time, you just invoke the function by its name including its parenthese.
-```
+```JavaScript
 tellMeTime();
 ```
 - You can give any legal variable name to a function.
@@ -1086,20 +1096,20 @@ tellMeTime();
 
 
 ## Functions: Passing them data
-```
+```JavaScript
 function greetVisitor(greeting) {
 	alert(greeting)
 }
 
 ```
 
-```
+```JavaScript
 function winnersCall(m, string, num) {
 	alert (m + string + num);
 }
 ```
 Now here's the statement that calls the function
-```
+```JavaScript
 var month = "April";
 winnersCall(month, "'s winner number is ", 17);
 ```
